@@ -1,0 +1,31 @@
+version: '3'
+services:
+  backend:
+    image: strapi/strapi
+    ports:
+      - '1337:1337'
+    container_name: newapp_strapi
+    environment:
+      APP_NAME: strapi_app
+      DATABASE_CLIENT: mongo
+      DATABASE_HOST: mongo
+      DATABASE_PORT: 27017
+      DATABASE_NAME: strapi_db
+    links:
+      - mongo
+    volumes:
+      - .:/usr/src/api/strapi_app
+    # volumes:
+    #   - ./server:/usr/src/app/server
+    #   - ./common:/usr/src/app/common
+    #   - ./package.json:/usr/src/app/package.json
+  mongo:
+    container_name: newapp_mongo
+    image: mongo
+    ports:
+      - '27017:27017'
+    # environment:
+      # MONGO_INITDB_DATABASE: strapitest
+      # MONGO_INITDB_ROOT_USERNAME: root
+      # MONGO_INITDB_ROOT_PASSWORD: 12345678
+    # command: --auth
