@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "job",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "default": "",
+      "type": "string"
+    },
+    "desc": {
+      "default": "",
+      "type": "text"
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
