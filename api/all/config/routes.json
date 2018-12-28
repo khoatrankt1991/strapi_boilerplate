@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/blocks",
+      "handler": "All.aboutall",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
