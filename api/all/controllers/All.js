@@ -16,7 +16,6 @@ module.exports = {
 
   aboutall: async (ctx) => {
     return {
-      about: await strapi.services.about.fetchAll(ctx.query),
       jobs: await strapi.services.job.fetchAll(ctx.query),
       skills: await strapi.services.skill.fetchAll(ctx.query),
       blocks: await strapi.services.block.fetchAll(ctx.query)

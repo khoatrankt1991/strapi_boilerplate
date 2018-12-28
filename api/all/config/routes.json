@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/blocks",
+      "path": "/api/aboutall",
       "handler": "All.aboutall",
       "config": {
         "policies": []
